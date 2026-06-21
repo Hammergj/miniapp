@@ -1,0 +1,215 @@
+/* ==============================
+   智小合 - 全局样式
+   主题色: #e53935
+   背景色: #0a0c10
+   ============================== */
+
+/* ---- 无障碍辅助类 ---- */
+.sr-only {
+  position: absolute;
+  width: 1rpx;
+  height: 1rpx;
+  padding: 0;
+  margin: -1rpx;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+page {
+  background-color: #0a0c10;
+  background-image: radial-gradient(ellipse at 30% 20%, rgba(229,57,53,0.03) 0%, transparent 50%),
+                    radial-gradient(ellipse at 70% 80%, rgba(124,58,237,0.02) 0%, transparent 50%);
+  color: #f2f4f8;
+  font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 28rpx;
+  line-height: 1.6;
+  box-sizing: border-box;
+  min-height: 100vh;
+  /* 无障碍：允许用户缩放 */
+  /* 注意：微信小程序默认支持缩放，不建议禁用 */
+}
+
+view, text, navigator, image, input, textarea, button, scroll-view {
+  box-sizing: border-box;
+  /* 无障碍：消除移动端点击高亮 */
+  -webkit-tap-highlight-color: transparent;
+  /* 无障碍：防止双击缩放延迟 */
+  touch-action: manipulation;
+}
+
+/* ---- 焦点可见状态（无障碍） ---- */
+/* 使用 :focus-visible 替代 :focus，避免点击时也显示焦点环 */
+button:focus-visible,
+navigator:focus-visible,
+input:focus-visible {
+  outline: 4rpx solid #e53935;
+  outline-offset: 4rpx;
+}
+
+/* ---- Hover 状态（桌面端需要） ---- */
+button:active,
+navigator:active,
+.menu-item:active,
+.contract-item:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* ---- 颜色变量（注释规范） ---- */
+/* 主色红: #e53935 */
+/* 主色深红: #c62828 */
+/* 背景色: #0a0c10 */
+/* 卡片背景: rgba(22, 25, 34, 0.85) */
+/* 文字主色: #f2f4f8 */
+/* 文字次要: #8b949e */
+/* 成功绿: #66bb6a */
+/* 警告橙: #ffa726 */
+/* 危险红: #ef5350 */
+
+/* ---- 毛玻璃效果 ---- */
+.glass {
+  background: rgba(22, 25, 34, 0.85);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border: 1rpx solid rgba(255, 255, 255, 0.05);
+}
+
+/* ---- 阴影 ---- */
+.shadow {
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.4);
+}
+
+.shadow-glow {
+  box-shadow: 0 4rpx 20rpx rgba(229, 57, 53, 0.15);
+}
+
+/* ---- 基础卡片样式 ---- */
+.card {
+  background: rgba(22, 25, 34, 0.85);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border-radius: 32rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.05);
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.4);
+}
+
+/* ---- 状态标签 ---- */
+.status-ready {
+  display: inline-block;
+  padding: 6rpx 20rpx;
+  border-radius: 40rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #66bb6a;
+  background: rgba(102, 187, 106, 0.12);
+  border: 1rpx solid rgba(102, 187, 106, 0.25);
+}
+
+.status-review {
+  display: inline-block;
+  padding: 6rpx 20rpx;
+  border-radius: 40rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #ffa726;
+  background: rgba(255, 167, 38, 0.12);
+  border: 1rpx solid rgba(255, 167, 38, 0.25);
+}
+
+.status-expired {
+  display: inline-block;
+  padding: 6rpx 20rpx;
+  border-radius: 40rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #ef5350;
+  background: rgba(239, 83, 80, 0.12);
+  border: 1rpx solid rgba(239, 83, 80, 0.25);
+}
+
+/* ---- 通用文字颜色 ---- */
+.text-primary {
+  color: #e53935;
+}
+
+.text-secondary {
+  color: #8b949e;
+}
+
+.text-white {
+  color: #f2f4f8;
+}
+
+.text-hint {
+  color: #5a5f68;
+}
+
+/* ---- 通用间距 ---- */
+.mt-sm { margin-top: 12rpx; }
+.mt-md { margin-top: 24rpx; }
+.mt-lg { margin-top: 48rpx; }
+.mb-sm { margin-bottom: 12rpx; }
+.mb-md { margin-bottom: 24rpx; }
+.mb-lg { margin-bottom: 48rpx; }
+.ml-sm { margin-left: 12rpx; }
+.ml-md { margin-left: 24rpx; }
+.mr-sm { margin-right: 12rpx; }
+.mr-md { margin-right: 24rpx; }
+
+/* ---- Flex 工具类 ---- */
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* ---- 安全区域底部占位 ---- */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ---- 动画 ---- */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ---- 无障碍：减少动画（prefers-reduced-motion） ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

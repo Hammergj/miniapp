@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/search/search",
+    "pages/chat/chat",
+    "pages/profile/profile",
+    "pages/upload/upload",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0a0c10",
+    "navigationBarTitleText": "智小合",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0a0c10",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#8a8f98",
+    "selectedColor": "#e53935",
+    "backgroundColor": "#0a0c10",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tab-home.png",
+        "selectedIconPath": "images/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "检索",
+        "iconPath": "images/tab-search.png",
+        "selectedIconPath": "images/tab-search-active.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "问答",
+        "iconPath": "images/tab-chat.png",
+        "selectedIconPath": "images/tab-chat-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tab-profile.png",
+        "selectedIconPath": "images/tab-profile-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
