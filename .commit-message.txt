@@ -1,0 +1,82 @@
+# Git 提交记录
+
+> 智小合小程序 v0.2.1 — 无障碍访问优化
+> 创建时间: 2026-06-21
+
+---
+
+## 提交信息
+
+```
+feat(a11y): 优化无障碍访问与交互状态
+
+- 使用 navigator/button 替换 view+bindtap，提升语义化
+- 添加 aria-label/aria-hidden/role 等无障碍属性
+- 添加 :focus-visible 焦点可见样式
+- 添加 hover/active 交互反馈状态
+- 添加 touch-action 和 tap-highlight-color 优化
+- 添加 prefers-reduced-motion 动画适配
+- 添加 .sr-only 屏幕阅读器专用类
+- 版本号更新: 0.2.0 → 0.2.1
+```
+
+---
+
+## 变更文件列表
+
+- `app.wxss` — 添加无障碍辅助类、焦点/hover样式、prefers-reduced-motion
+- `pages/home/home.wxml` — 语义化组件、ARIA属性
+- `pages/home/home.wxss` — hover样式
+- `pages/chat/chat.wxml` — 语义化组件、ARIA属性、表单label
+- `pages/chat/chat.wxss` — hover/focus样式
+- `pages/search/search.wxml` — 语义化组件、ARIA属性、表单label
+- `pages/detail/detail.wxml` — 语义化组件、ARIA属性
+- `pages/upload/upload.wxml` — 语义化组件、ARIA属性
+- `pages/profile/profile.wxml` — 语义化组件、ARIA属性、badge动态数据
+- `pages/profile/profile.wxss` — hover样式
+- `custom-tab-bar/index.wxml` — 语义化组件、ARIA属性
+- `VERSION.md` — 添加 v0.2.1 版本记录
+- `project.config.json` — 版本号 0.2.0 → 0.2.1
+
+---
+
+## 后续提交步骤
+
+当你安装 Git 后，按以下步骤提交：
+
+```bash
+# 1. 进入项目目录
+cd f:\TRAE\zhi-xiaohe-miniapp
+
+# 2. 初始化 Git 仓库（首次需要）
+git init
+
+# 3. 添加所有变更文件
+git add app.wxss pages/ VERSION.md project.config.json
+
+# 4. 确认变更状态
+git status
+
+# 5. 提交（使用以下提交信息）
+git commit -m "feat(a11y): 优化无障碍访问与交互状态" \
+  -m "- 使用 navigator/button 替换 view+bindtap，提升语义化" \
+  -m "- 添加 aria-label/aria-hidden/role 等无障碍属性" \
+  -m "- 添加 :focus-visible 焦点可见样式" \
+  -m "- 添加 hover/active 交互反馈状态" \
+  -m "- 添加 touch-action 和 tap-highlight-color 优化" \
+  -m "- 添加 prefers-reduced-motion 动画适配" \
+  -m "- 添加 .sr-only 屏幕阅读器专用类" \
+  -m "- 版本号更新: 0.2.0 → 0.2.1"
+
+# 6. 关联远程仓库（如有）
+git remote add origin <你的远程仓库地址>
+git push -u origin main
+```
+
+---
+
+## Git 安装指南
+
+1. 访问 https://git-scm.com/download/win 下载安装包
+2. 运行安装程序，默认选项即可
+3. 重启终端后，验证安装：`git --version`
